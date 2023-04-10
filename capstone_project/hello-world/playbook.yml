@@ -1,0 +1,14 @@
+- name: Update node application name
+  hosts: all
+  become: yes
+  vars:
+    - app_name: "Hello DevOps!"
+  tasks:
+    - name: Ping Check using ping module
+      ping:
+
+    - name: update application name
+      replace:
+        path: ./package.json
+        regexp: '"name": "(.*)"'
+        replace: '"name": "{{ app_name }}"'
