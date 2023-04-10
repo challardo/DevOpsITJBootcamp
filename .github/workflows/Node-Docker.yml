@@ -18,11 +18,11 @@ jobs:
           node-version: "14.x"
       - name: Install dependencies
         run: |
-          cd capstone_project\hello-world
+          cd capstone_project/hello-world
           npm install
       - name: Run test
         run: |
-          cd capstone_project\hello-world
+          cd capstone_project/hello-world
           npm run test
 
       - uses: actions/checkout@v3
